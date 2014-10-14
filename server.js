@@ -4,6 +4,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 1337;
+require('console-stamp')(console, '[HH:MM:ss.l]');
 
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
